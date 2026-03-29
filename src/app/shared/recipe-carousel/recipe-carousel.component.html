@@ -1,1 +1,23 @@
-<p>recipe-carousel works!</p>
+<div class="carousel-wrap">
+  <div class="carousel-track">
+    <article class="recipe-card" *ngFor="let recipe of recipes">
+      <div class="recipe-card__media">
+        <div class="recipe-card__icon">
+          <mat-icon>{{ recipe.icon }}</mat-icon>
+        </div>
+
+        <span class="recipe-card__tag">{{ recipe.tag }}</span>
+      </div>
+
+      <div class="recipe-card__body">
+        <h3>{{ recipe.title }}</h3>
+        <p>{{ recipe.subtitle }}</p>
+
+        <div class="recipe-card__meta">
+          <span>{{ recipe.time }}</span>
+          <span>{{ recipe.age }}</span>
+        </div>
+      </div>
+    </article>
+  </div>
+</div>
