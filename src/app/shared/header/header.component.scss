@@ -1,0 +1,46 @@
+.app-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+}
+
+.brand__icon {
+  display: grid;
+  place-items: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 1rem;
+  background: #eef7ef;
+  color: #6b8f71;
+}
+
+.brand__eyebrow {
+  margin: 0;
+  font-size: 0.8rem;
+  color: #6b7280;
+}
+
+.brand h3 {
+  margin: 0.15rem 0 0;
+  font-size: 1.05rem;
+}
+
+.icon-btn {
+  display: grid;
+  place-items: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border: 0;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.85);
+  box-shadow: 0 8px 18px rgba(31, 41, 55, 0.08);
+  cursor: pointer;
+  color: #1f2937;
+}
