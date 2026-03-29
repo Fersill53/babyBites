@@ -1,1 +1,57 @@
-<p>home works!</p>
+<div class="home-page">
+    <app-header></app-header>
+
+    <section class="hero">
+        <div class="hero_content">
+            <p class="eyebrow">Meal prep made simple</p>
+            <h1>Baby food recipes for your 1-year-old</h1>
+            <p class="hero_text">
+                Plan ahead, save favorites, and browse easy recipe ideas in a calm modern layout.
+            </p>
+        </div>
+
+        <div class="hero_badge">
+            <mat-icon>favorite</mat-icon>
+            <span>Modern + easy to scan</span>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="section_head">
+            <h2>Popular this week</h2>
+            <button type="button" class="text-btn">See All</button>
+        </div>
+
+        <div class="categories-grid">
+            <button type="button" class="category-card" *ngFor="let category of categories">
+                <mat-icon>{{ category.icon }}</mat-icon>
+                <span>{{ category.name }}</span>
+            </button>
+        </div>
+    </section>
+
+    <section class="planner-preview">
+        <div class="planner-preview_text">
+            <p class="eyebrow">Coming Next</p>
+            <h2>Weekly Prep Planner</h2>
+            <p>
+                Organize recipes for the week, build a prep routine, and save meal ideas your baby likes.
+            </p>
+        </div>
+
+        <div class="planner-preview_card">
+            <div class="mini-row">
+                <span>Monday</span>
+                <strong>Banana Oat Bites</strong>
+            </div>
+            <div class="mini-row">
+                <span>Tuesday</span>
+                <strong>Sweet Potato Mash</strong>
+            </div>
+            <div class="mini-row">
+                <span>Wednesday</span>
+                <strong>Veggie Chicken Blend</strong>
+            </div>
+        </div>
+    </section>
+</div>

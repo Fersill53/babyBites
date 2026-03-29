@@ -6,4 +6,4 @@ import { Component } from '@angular/core';
   templateUrl: './recipe-carousel.html',
   styleUrl: './recipe-carousel.scss',
 })
-export class RecipeCarousel {}
+export class RecipeCarouselComponent {}
