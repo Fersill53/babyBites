@@ -1,0 +1,36 @@
+:host {
+  display: block;
+}
+
+.simple-page {
+  min-height: 100vh;
+  padding: 1.25rem;
+  background: #f7f4ef;
+  color: #1f2937;
+}
+
+.eyebrow {
+  margin: 0 0 0.35rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #6b8f71;
+}
+
+.simple-card {
+  margin-top: 1rem;
+  padding: 1.5rem;
+  border-radius: 1.75rem;
+  background: #ffffff;
+  box-shadow: 0 10px 30px rgba(31, 41, 55, 0.08);
+}
+
+.simple-card h1 {
+  margin: 0;
+}
+
+.simple-card p:last-child {
+  color: #6b7280;
+  line-height: 1.6;
+}
