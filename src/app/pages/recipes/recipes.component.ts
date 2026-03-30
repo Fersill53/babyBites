@@ -1,9 +1,11 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterLink } from '@angular/router';
 import { MatIconModule } from '@angular/material/icon';
 import { HeaderComponent } from '../../shared/header/header.component';
 
 interface RecipeListItem {
+  slug: string;
   title: string;
   description: string;
   tag: string;
@@ -15,7 +17,7 @@ interface RecipeListItem {
 @Component({
   selector: 'app-recipes',
   standalone: true,
-  imports: [CommonModule, MatIconModule, HeaderComponent],
+  imports: [CommonModule, RouterLink, MatIconModule, HeaderComponent],
   templateUrl: './recipes.component.html',
   styleUrl: './recipes.component.scss'
 })
@@ -24,6 +26,7 @@ export class RecipesComponent {
 
   recipes: RecipeListItem[] = [
     {
+      slug: 'sweet-potato-mash',
       title: 'Sweet Potato Mash',
       description: 'Smooth, simple, and great for batch prep.',
       tag: 'Breakfast',
@@ -32,6 +35,7 @@ export class RecipesComponent {
       icon: 'restaurant'
     },
     {
+      slug: 'banana-oat-bites',
       title: 'Banana Oat Bites',
       description: 'Soft little bites for a quick meal prep session.',
       tag: 'Snacks',
@@ -40,6 +44,7 @@ export class RecipesComponent {
       icon: 'bakery_dining'
     },
     {
+      slug: 'avocado-pasta',
       title: 'Avocado Pasta',
       description: 'Creamy pasta with a soft texture for easy eating.',
       tag: 'Lunch',
@@ -48,6 +53,7 @@ export class RecipesComponent {
       icon: 'lunch_dining'
     },
     {
+      slug: 'veggie-chicken-blend',
       title: 'Veggie Chicken Blend',
       description: 'A batch-cook recipe that works well for freezer prep.',
       tag: 'Dinner',
@@ -56,6 +62,7 @@ export class RecipesComponent {
       icon: 'dinner_dining'
     },
     {
+      slug: 'apple-cinnamon-bowl',
       title: 'Apple Cinnamon Bowl',
       description: 'Warm and cozy with a soft spoon-friendly texture.',
       tag: 'Breakfast',
@@ -64,6 +71,7 @@ export class RecipesComponent {
       icon: 'icecream'
     },
     {
+      slug: 'pea-potato-mix',
       title: 'Pea Potato Mix',
       description: 'Mild flavor and easy to portion into prep containers.',
       tag: 'Freezer',

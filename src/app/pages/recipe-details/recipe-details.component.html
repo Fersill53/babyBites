@@ -1,0 +1,76 @@
+<div class="recipe-details-page">
+  <app-header></app-header>
+
+  <ng-container *ngIf="recipe; else notFound">
+    <section class="details-hero">
+      <div class="details-hero__content">
+        <a class="back-link" routerLink="/recipes">
+          <mat-icon>arrow_back</mat-icon>
+          <span>Back to recipes</span>
+        </a>
+
+        <p class="eyebrow">{{ recipe.tag }}</p>
+        <h1>{{ recipe.title }}</h1>
+        <p class="details-hero__text">{{ recipe.longDescription }}</p>
+
+        <div class="details-hero__meta">
+          <span>{{ recipe.time }}</span>
+          <span>{{ recipe.age }}</span>
+        </div>
+      </div>
+
+      <div class="details-hero__art">
+        <div class="details-hero__icon">
+          <mat-icon>{{ recipe.icon }}</mat-icon>
+        </div>
+      </div>
+    </section>
+
+    <section class="details-grid">
+      <article class="details-card">
+        <div class="details-card__head">
+          <mat-icon>shopping_bag</mat-icon>
+          <h2>Ingredients</h2>
+        </div>
+
+        <ul class="details-list">
+          <li *ngFor="let ingredient of recipe.ingredients">{{ ingredient }}</li>
+        </ul>
+      </article>
+
+      <article class="details-card">
+        <div class="details-card__head">
+          <mat-icon>format_list_numbered</mat-icon>
+          <h2>Steps</h2>
+        </div>
+
+        <ol class="details-list details-list--numbered">
+          <li *ngFor="let step of recipe.steps">{{ step }}</li>
+        </ol>
+      </article>
+    </section>
+
+    <section class="details-card details-card--notes">
+      <div class="details-card__head">
+        <mat-icon>lightbulb</mat-icon>
+        <h2>Meal prep notes</h2>
+      </div>
+
+      <ul class="details-list">
+        <li *ngFor="let note of recipe.notes">{{ note }}</li>
+      </ul>
+    </section>
+  </ng-container>
+
+  <ng-template #notFound>
+    <section class="details-card not-found-card">
+      <a class="back-link" routerLink="/recipes">
+        <mat-icon>arrow_back</mat-icon>
+        <span>Back to recipes</span>
+      </a>
+
+      <h1>Recipe not found</h1>
+      <p>The recipe you tried to open does not exist in the current list.</p>
+    </section>
+  </ng-template>
+</div>
