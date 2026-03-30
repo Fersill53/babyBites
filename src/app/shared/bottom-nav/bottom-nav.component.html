@@ -1,0 +1,12 @@
+<nav class="bottom-nav" aria-label="Primary navigation">
+  <a
+    *ngFor="let item of navItems"
+    class="bottom-nav__item"
+    [routerLink]="item.route"
+    routerLinkActive="bottom-nav__item--active"
+    [routerLinkActiveOptions]="{ exact: item.route === '/' }"
+  >
+    <mat-icon>{{ item.icon }}</mat-icon>
+    <span>{{ item.label }}</span>
+  </a>
+</nav>

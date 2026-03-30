@@ -1,0 +1,58 @@
+<div class="recipes-page">
+  <app-header></app-header>
+
+  <section class="recipes-hero">
+    <div class="recipes-hero__content">
+      <p class="eyebrow">Recipe library</p>
+      <h1>Browse simple baby meal prep recipes</h1>
+      <p>
+        Save the ones you like, plan your week, and keep everything easy to scan.
+      </p>
+    </div>
+
+    <button type="button" class="search-card" aria-label="Search recipes">
+      <mat-icon>search</mat-icon>
+      <span>Search recipes</span>
+    </button>
+  </section>
+
+  <section class="filter-row">
+    <button
+      type="button"
+      class="filter-chip"
+      *ngFor="let filter of filters; let first = first"
+      [class.filter-chip--active]="first"
+    >
+      {{ filter }}
+    </button>
+  </section>
+
+  <section class="recipes-grid">
+    <article class="recipe-list-card" *ngFor="let recipe of recipes">
+      <div class="recipe-list-card__media">
+        <div class="recipe-list-card__icon">
+          <mat-icon>{{ recipe.icon }}</mat-icon>
+        </div>
+
+        <span class="recipe-list-card__tag">{{ recipe.tag }}</span>
+      </div>
+
+      <div class="recipe-list-card__body">
+        <div class="recipe-list-card__top">
+          <h2>{{ recipe.title }}</h2>
+
+          <button type="button" class="favorite-btn" aria-label="Save recipe">
+            <mat-icon>favorite_border</mat-icon>
+          </button>
+        </div>
+
+        <p>{{ recipe.description }}</p>
+
+        <div class="recipe-list-card__meta">
+          <span>{{ recipe.time }}</span>
+          <span>{{ recipe.age }}</span>
+        </div>
+      </div>
+    </article>
+  </section>
+</div>
